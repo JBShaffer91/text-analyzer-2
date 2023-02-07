@@ -13,3 +13,11 @@ it('Should remove multiple words from the text', () => {
   let filteredText = removeWords(text, wordsToRemove);
   expect(filteredText).toBe("Hello there, how are you today?");
 });
+
+// Test case 3: Tests that the function removes words regardless of case
+it('Should remove words regardless of case', () => {
+  let text = "Hello there MuPpeteer, how are you today?";
+  let wordsToRemove = ["zoinks", "muppeteer", "biffaroni", "loopdaloop"];
+  let filteredText = removeWords(text, wordsToRemove);
+  expect(filteredText).toBe("Hello there, how are you today?");
+});
